@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UBF2113 Prinsip Ekonomi – Topik 2: Permintaan, Penawaran, Keseimbangan dan Keanjalan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Public+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f6fa;--card:#fff;--ink:#16243b;--mut:#55627a;--pri:#0f766e;--acc:#f59e0b;--soft:#e3f1ef;--line:#d6dfe8;--bad:#b4442f;--good:#1b7a46;--d:#c2410c;--s:#1d4ed8}
+@media(prefers-color-scheme:dark){:root{--bg:#0e1626;--card:#16233a;--ink:#e8eef7;--mut:#9fb0c8;--pri:#2dd4bf;--acc:#fbbf24;--soft:#12353a;--line:#2a3a56;--bad:#f28b73;--good:#5fd391;--d:#fb923c;--s:#7aa2ff}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Public Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.15;margin:0 0 .6em}
+header{background:linear-gradient(135deg,#1d3557,#0f766e);color:#fff;padding:56px 20px 70px}
+.wrap{max-width:1040px;margin:auto}
+header h1{font-size:clamp(2rem,6vw,3.4rem);font-weight:800;max-width:18ch}
+header p{max-width:60ch;opacity:.92;margin:0 0 20px}
+.tags span{display:inline-block;background:rgba(255,255,255,.16);border-radius:99px;padding:3px 14px;margin:0 8px 8px 0;font-size:.85rem}
+header a{color:#fde68a}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap}
+nav .wrap{display:flex;gap:4px;padding:0 12px}
+nav a{padding:14px 12px;color:var(--mut);text-decoration:none;font-weight:500;font-size:.92rem;border-bottom:3px solid transparent}
+nav a:hover,nav a:focus-visible{color:var(--pri);border-color:var(--acc);outline:none}
+main{max-width:1040px;margin:auto;padding:10px 20px 60px}
+section{margin-top:48px}
+h2{font-size:1.9rem;display:flex;gap:12px;align-items:center}
+h2 .n{background:var(--acc);color:#1b1b1b;border-radius:10px;padding:0 11px;font-size:1.2rem}
+h3{font-size:1.2rem;color:var(--pri);margin-top:1.4em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:14px 0}
+.def{border-left:6px solid var(--acc);background:var(--soft);border-radius:0 12px 12px 0;padding:16px 20px;font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.grid .card{margin:0}.ic{font-size:2rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:2px 18px}
+summary{cursor:pointer;font-weight:700;padding:12px 0}
+summary:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+table{border-collapse:collapse;width:100%;font-size:.93rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--soft)}
+tr.eq td{background:var(--acc);color:#1b1b1b;font-weight:700}
+.scroll{overflow-x:auto}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+button{font:inherit;font-weight:600;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 14px;cursor:pointer}
+button[aria-pressed=true]{background:var(--pri);color:#fff;border-color:var(--pri)}
+input[type=number]{font:inherit;width:90px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--pri)}
+label{display:block;font-weight:500;margin:6px 0}
+svg{max-width:100%;height:auto}
+svg text{fill:var(--ink);font:12px "Public Sans",sans-serif}
+.box{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;align-items:start}
+@media(max-width:720px){.box{grid-template-columns:1fr}}
+.out{font-weight:500}.out b{color:var(--pri)}
+.fm{font:700 1.15rem "Public Sans",sans-serif;background:var(--soft);border-radius:10px;padding:10px 14px;display:inline-block}
+.d{color:var(--d);font-weight:700}.s{color:var(--s);font-weight:700}
+ul{padding-left:1.2em}li{margin:.25em 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+.tag{display:inline-block;background:var(--acc);color:#1b1b1b;border-radius:6px;padding:0 8px;font-weight:700;font-size:.85rem}
+.q{border-top:1px solid var(--line);padding:12px 0}.q:first-of-type{border:0}
+.q p{margin:0 0 6px}.ans{margin-top:6px;font-weight:500}
+.ok{color:var(--good)}.no{color:var(--bad)}
+footer{text-align:center;color:var(--mut);font-size:.85rem;padding:30px 20px;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+<div class="tags"><span>Jabatan Perniagaan</span><span>Diploma Pengurusan Perniagaan</span><span>UBF2113 Prinsip Ekonomi</span></div>
+<h1>Permintaan, Penawaran, Keseimbangan dan Keanjalan</h1>
+<p>Nota Kuliah 2. Bagaimana harga terbentuk di pasaran dan seberapa sensitif pengguna terhadap perubahan harga. <a href="index.html">Kembali ke Topik 1</a></p>
+</div></header>
+<nav aria-label="Kandungan"><div class="wrap">
+<a href="#s21">2.1 Permintaan</a><a href="#s22">2.2 Penawaran</a><a href="#s23">2.3 Keseimbangan Pasaran</a><a href="#s24">2.4 Keanjalan</a><a href="#lat">Latihan</a>
+</div></nav>
+<main>
+
+<section id="s21"><h2><span class="n">2.1</span>Konsep Permintaan</h2>
+<p class="def"><b>Permintaan</b> ialah kesanggupan dan keinginan pengguna untuk mendapatkan barang pada suatu tingkat harga dalam jangka masa tertentu (<i>ceteris paribus</i>). <b>Kuantiti diminta (Qd)</b> ialah kuantiti yang dibeli pada harga tersebut.</p>
+<div class="card"><h3 style="margin-top:0">📉 Hukum permintaan</h3><p>Dengan andaian semua faktor lain tetap, harga naik → kuantiti diminta turun, harga turun → kuantiti diminta naik. Hubungan harga dan kuantiti adalah <b>songsang</b>, jadi keluk permintaan mencerun ke bawah dari kiri ke kanan.</p>
+<div class="two"><div><b>Kesan pendapatan</b><br>Harga naik, pendapatan tetap, maka pendapatan sebenar turun. Pengguna tidak mampu membeli sebanyak dahulu.</div><div><b>Kesan penggantian</b><br>Barang A jadi lebih mahal berbanding barang B, maka pengguna beralih membeli B yang lebih murah.</div></div></div>
+
+<h3>Jadual dan keluk permintaan</h3>
+<div class="scroll card"><table><tr><th>Kombinasi</th><th>O</th><th>P</th><th>Q</th><th>R</th><th>S</th><th>T</th></tr><tr><td>Harga (RM)</td><td>50</td><td>40</td><td>30</td><td>20</td><td>10</td><td>0</td></tr><tr><td>Kuantiti (unit)</td><td>0</td><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td></tr></table>
+<p style="font-size:.85rem;color:var(--mut);margin:8px 0 0">Nota asal menulis kuantiti P dan Q sebagai 8 dan 4. Ini ralat taip; rajah dalam nota menunjukkan 2 dan 4, dan itulah yang digunakan di sini.</p></div>
+
+<h3>Kira fungsi dari dua titik</h3>
+<div class="card"><div class="btns" id="fnMode"><button data-m="d" aria-pressed="true">Permintaan Qd = a − bP</button><button data-m="s" aria-pressed="false">Penawaran Qs = a + bP</button></div>
+<div class="box"><div>
+<label>Titik 1: harga <input type="number" id="p1" value="5"> kuantiti <input type="number" id="q1" value="50"></label>
+<label>Titik 2: harga <input type="number" id="p2" value="4"> kuantiti <input type="number" id="q2" value="100"></label>
+<p class="out" id="fnOut"></p></div><div class="scroll"><table id="fnTbl"></table></div></div></div>
+
+<h3>Permintaan individu dan pasaran</h3>
+<p>Permintaan pasaran diperoleh dengan <b>menjumlahkan secara mendatar</b> kuantiti diminta semua pengguna pada setiap harga. Keluk pasaran juga mencerun ke bawah dan lebih mendatar (lebih anjal) berbanding keluk individu.</p>
+<div class="scroll card"><table><tr><th>Harga (RM)</th><th>Pengguna A</th><th>Pengguna B</th><th>Pengguna C</th><th>Pasaran (kg)</th></tr>
+<tr><td>4</td><td>4</td><td>8</td><td>12</td><td><b>24</b></td></tr><tr><td>3</td><td>5</td><td>10</td><td>15</td><td><b>30</b></td></tr><tr><td>2</td><td>6</td><td>12</td><td>20</td><td><b>38</b></td></tr><tr><td>1</td><td>10</td><td>18</td><td>25</td><td><b>53</b></td></tr></table></div>
+
+<h3>Pergerakan sepanjang keluk atau peralihan keluk?</h3>
+<div class="grid"><div class="card"><b>Perubahan kuantiti diminta</b><br>Puncanya <u>harga barang itu sendiri</u>. Ditunjukkan oleh <b>pergerakan di sepanjang</b> keluk yang sama. Harga turun = pengembangan, harga naik = penguncupan.</div>
+<div class="card"><b>Perubahan permintaan</b><br>Puncanya <u>faktor selain harga</u>. Ditunjukkan oleh <b>peralihan keluk</b>. Ke kanan = pertambahan, ke kiri = pengurangan.</div></div>
+<div class="btns" id="mvType"><button data-t="D" aria-pressed="true">Permintaan</button><button data-t="S" aria-pressed="false">Penawaran</button></div>
+<div class="btns" id="mvCase"></div>
+<div class="card"><div class="box"><svg id="mv" viewBox="0 0 320 250" role="img" aria-label="Pergerakan dan peralihan keluk"></svg><p class="out" id="mvTxt"></p></div></div>
+
+<h3>Faktor yang mempengaruhi permintaan</h3>
+<details open><summary>Harga barang lain</summary><ul><li><b>Barang pengganti:</b> hubungan positif. Harga kamera digital turun → permintaan kamera biasa turun (keluk ke kiri).</li><li><b>Barang penggenap:</b> hubungan negatif. Harga kamera digital turun → permintaan kad memori naik (keluk ke kanan).</li></ul></details>
+<details><summary>Pendapatan pengguna: tiga jenis barang</summary><ul><li><b>Barang normal:</b> pendapatan naik, permintaan naik (kereta, barang elektrik).</li><li><b>Barang bawahan (<i>inferior</i>):</b> pendapatan naik, permintaan turun kerana pengguna beralih kepada barang lebih berkualiti atau berjenama.</li><li><b>Barang mesti:</b> permintaan hampir tidak berubah (garam, gula).</li></ul></details>
+<details><summary>Citarasa, penduduk, musim</summary><ul><li><b>Citarasa:</b> dipengaruhi fesyen, minat, iklan dan kempen kerajaan.</li><li><b>Jumlah penduduk:</b> bertambah apabila kelahiran melebihi kematian atau penghijrahan masuk melebihi keluar.</li><li><b>Musim:</b> contoh pengangkutan awam menjelang perayaan.</li></ul></details>
+<details><summary>Dasar kerajaan, kredit, jangkaan</summary><ul><li><b>Dasar kerajaan:</b> cukai dan insentif, contoh rebat cukai pembelian komputer peribadi.</li><li><b>Kemudahan kredit:</b> syarat longgar, tempoh panjang dan faedah rendah menambah permintaan barang tahan lama.</li><li><b>Jangkaan masa depan:</b> jika harga dijangka naik, permintaan sekarang bertambah.</li></ul></details>
+</section>
+
+<section id="s22"><h2><span class="n">2.2</span>Konsep Penawaran</h2>
+<p class="def"><b>Penawaran</b> ialah kuantiti barang yang sanggup dikeluarkan pengeluar untuk dijual pada suatu tingkat harga dalam jangka masa tertentu.</p>
+<div class="card"><h3 style="margin-top:0">📈 Hukum penawaran</h3><p>Dengan <i>ceteris paribus</i>, harga naik → kuantiti ditawar naik. Hubungan adalah <b>positif</b> kerana pengeluar yang rasional mahu memaksimumkan untung. Keluk penawaran mencerun ke atas dari kiri ke kanan.</p>
+<div class="scroll"><table><tr><th>Harga (RM)</th><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td></tr><tr><th>Kuantiti (unit)</th><td>100</td><td>80</td><td>60</td><td>40</td><td>20</td></tr></table></div></div>
+<p>Contoh fungsi: diberi (P=4, Q=90) dan (P=2, Q=50), maka b = 20, a = 10, jadi <span class="fm">Qs = 10 + 20P</span>. Cuba dalam kalkulator fungsi di atas.</p>
+
+<h3>Penawaran firma dan pasaran</h3>
+<p>Keluk penawaran pasaran diperoleh dengan menjumlahkan secara mendatar kuantiti ditawar semua firma.</p>
+<div class="scroll card"><table><tr><th>Harga /kg (RM)</th><th>Firma A</th><th>Firma B</th><th>Pasaran (kg)</th></tr><tr><td>1</td><td>20</td><td>10</td><td><b>30</b></td></tr><tr><td>2</td><td>40</td><td>30</td><td><b>70</b></td></tr><tr><td>3</td><td>60</td><td>50</td><td><b>110</b></td></tr><tr><td>4</td><td>80</td><td>70</td><td><b>150</b></td></tr><tr><td>5</td><td>100</td><td>90</td><td><b>190</b></td></tr></table></div>
+<div class="grid"><div class="card"><b>Perubahan kuantiti ditawar</b><br>Harga barang itu berubah. Pergerakan di sepanjang keluk yang sama. Harga naik = pengembangan, harga turun = penguncupan.</div>
+<div class="card"><b>Perubahan penawaran</b><br>Faktor selain harga berubah, contoh kos input dan teknologi. Keluk beralih. Kos naik = ke kiri, kos turun = ke kanan.</div></div>
+
+<h3>Faktor yang mempengaruhi penawaran</h3>
+<div class="grid">
+<div class="card"><b>Harga barang lain</b><br>Penawaran bersaing: input sama, pengeluar beralih kepada barang lebih untung (getah ke sawit). Penawaran bersama: produk sampingan (kulit lembu dan daging lembu).</div>
+<div class="card"><b>Kos input</b><br>Harga petrol naik → margin untung turun → keluk ke kiri.</div>
+<div class="card"><b>Teknologi dan daya pengeluaran</b><br>Mesin baru dan buruh cekap menambah penawaran.</div>
+<div class="card"><b>Dasar kerajaan</b><br>Cukai menaikkan kos → penawaran jatuh. Subsidi menurunkan kos → penawaran naik.</div>
+<div class="card"><b>Matlamat pengeluar</b><br>Untung maksimum atau output maksimum.</div>
+<div class="card"><b>Bilangan pengeluar</b><br>Semakin ramai pengeluar, semakin banyak penawaran pasaran.</div></div>
+</section>
+
+<section id="s23"><h2><span class="n">2.3</span>Keseimbangan Pasaran</h2>
+<p class="def">Keseimbangan pasaran berlaku apabila <b>kuantiti diminta = kuantiti ditawar</b>. Ia boleh ditentukan melalui jadual, keluk (permintaan bersilang dengan penawaran) atau persamaan.</p>
+<div class="two"><div class="card"><b>Lebihan penawaran</b><br>Harga melebihi harga keseimbangan, Qs lebih besar daripada Qd. Stok firma bertambah, maka firma mengurangkan pengeluaran.</div><div class="card"><b>Lebihan permintaan</b><br>Harga di bawah harga keseimbangan, Qd lebih besar daripada Qs. Firma terpaksa menambah pengeluaran.</div></div>
+
+<h3>Menyelesaikan dengan persamaan</h3>
+<div class="card"><p>Diberi <span class="d">Qd = 28 − 5P</span> dan <span class="s">Qs = −2 + 5P</span>. Pada keseimbangan Qd = Qs:</p>
+<p>28 − 5P = −2 + 5P → 30 = 10P → <b>P = RM3</b>. Gantikan: Qd = 28 − 5(3) = <b>13 unit</b>, Qs = −2 + 5(3) = 13 unit.</p>
+<p style="font-size:.85rem;color:var(--mut);margin:0">Langkah dalam nota asal menulis "0P = 30" dan "P = 30/10". Maksudnya 10P = 30.</p></div>
+
+<h3>Simulator: gerakkan permintaan dan penawaran</h3>
+<p>Mula daripada keseimbangan asal (P = RM3, Q = 13). Seret peluncur atau pilih senario untuk melihat titik keseimbangan berpindah. Garis putus-putus ialah keluk asal.</p>
+<div class="card"><div class="box"><svg id="eq" viewBox="0 0 320 250" role="img" aria-label="Keseimbangan pasaran"></svg>
+<div><label><span class="d">Permintaan</span>: <b id="dv">0</b> unit<input type="range" id="dS" min="-10" max="10" value="0"></label>
+<label><span class="s">Penawaran</span>: <b id="sv">0</b> unit<input type="range" id="sS" min="-10" max="10" value="0"></label>
+<div class="btns" id="presets"></div><p class="out" id="eqTxt"></p></div></div>
+<div class="scroll"><table id="eqTbl"></table></div></div>
+
+<h3>Ringkasan kesan perubahan serentak</h3>
+<div class="scroll card"><table><tr><th>Perubahan</th><th>Harga</th><th>Kuantiti</th></tr>
+<tr><td>Permintaan ↑ dan penawaran ↑ (kadar sama)</td><td>Tetap</td><td>Naik</td></tr>
+<tr><td>Permintaan ↓ dan penawaran ↓ (kadar sama)</td><td>Tetap</td><td>Turun</td></tr>
+<tr><td>Penawaran ↑ dan permintaan ↓ (kadar sama)</td><td>Turun</td><td>Tetap</td></tr>
+<tr><td>Permintaan ↑ dan penawaran ↓ (kadar sama)</td><td>Naik</td><td>Tetap</td></tr>
+<tr><td>Kedua-duanya ↑: permintaan ↑ lebih</td><td>Naik</td><td>Naik</td></tr>
+<tr><td>Kedua-duanya ↑: penawaran ↑ lebih</td><td>Turun</td><td>Naik</td></tr>
+<tr><td>Permintaan ↑, penawaran ↓: permintaan lebih</td><td>Naik</td><td>Naik</td></tr>
+<tr><td>Permintaan ↑, penawaran ↓: penawaran lebih</td><td>Naik</td><td>Turun</td></tr>
+<tr><td>Penawaran ↑, permintaan ↓: penawaran lebih</td><td>Turun</td><td>Naik</td></tr>
+<tr><td>Penawaran ↑, permintaan ↓: permintaan lebih</td><td>Turun</td><td>Turun</td></tr></table></div>
+<details><summary>Kes khas: kuantiti tetap atau harga tetap</summary><ul><li><b>Kuantiti tetap</b> (keluk menegak): penawaran ↑ → harga turun; penawaran ↓ → harga naik; permintaan ↑ → harga naik; permintaan ↓ → harga turun.</li><li><b>Harga tetap</b> (keluk mendatar): penawaran atau permintaan ↑ → kuantiti naik; penawaran atau permintaan ↓ → kuantiti turun.</li></ul></details>
+</section>
+
+<section id="s24"><h2><span class="n">2.4</span>Keanjalan Harga Permintaan</h2>
+<p class="def"><b>Keanjalan harga permintaan (Ed)</b> mengukur tindak balas kuantiti diminta terhadap perubahan harga barang itu, dengan <i>ceteris paribus</i>.</p>
+<p class="fm">Ed = % ∆Qd ÷ % ∆P</p>
+<p>dengan % ∆Qd = (Q1 − Q0) ÷ Q0 × 100 dan % ∆P = (P1 − P0) ÷ P0 × 100.</p>
+
+<h3>Kalkulator keanjalan</h3>
+<div class="card"><div class="box"><div>
+<label>Harga asal P0 <input type="number" id="eP0" value="2"> harga baru P1 <input type="number" id="eP1" value="6"></label>
+<label>Kuantiti asal Q0 <input type="number" id="eQ0" value="60"> kuantiti baru Q1 <input type="number" id="eQ1" value="40"></label>
+<p style="font-size:.85rem;color:var(--mut)">Contoh dalam nota: harga RM2 ke RM6, kuantiti 60 ke 40.</p></div><p class="out" id="eOut"></p></div></div>
+
+<h3>Lima darjah keanjalan</h3>
+<div class="scroll card"><table>
+<tr><th>Darjah</th><th>Nilai</th><th>Keluk</th><th>Penerangan dan contoh</th></tr>
+<tr><td>Tidak anjal sempurna</td><td>Ed = 0</td><td><svg width="70" height="50" viewBox="0 0 70 50"><path d="M5 5V45H65" fill="none" stroke="#8a97ad"/><path d="M35 5V45" stroke="#c2410c" stroke-width="3"/></svg></td><td>Harga berubah, kuantiti tidak berubah. Keluk menegak. Barang mesti: beras, garam, air.</td></tr>
+<tr><td>Tidak anjal</td><td>0 &lt; Ed &lt; 1</td><td><svg width="70" height="50" viewBox="0 0 70 50"><path d="M5 5V45H65" fill="none" stroke="#8a97ad"/><path d="M28 6L44 44" stroke="#c2410c" stroke-width="3"/></svg></td><td>% perubahan kuantiti kurang daripada % perubahan harga. Keluk curam. Barang keperluan.</td></tr>
+<tr><td>Anjal satu</td><td>Ed = 1</td><td><svg width="70" height="50" viewBox="0 0 70 50"><path d="M5 5V45H65" fill="none" stroke="#8a97ad"/><path d="M10 8Q14 38 62 42" fill="none" stroke="#c2410c" stroke-width="3"/></svg></td><td>% perubahan kuantiti sama dengan % perubahan harga. Hiperbola tepat. Barang biasa seperti pakaian.</td></tr>
+<tr><td>Anjal</td><td>1 &lt; Ed &lt; ∞</td><td><svg width="70" height="50" viewBox="0 0 70 50"><path d="M5 5V45H65" fill="none" stroke="#8a97ad"/><path d="M8 16L62 36" stroke="#c2410c" stroke-width="3"/></svg></td><td>% perubahan kuantiti melebihi % perubahan harga. Keluk landai. Barang mewah atau banyak pengganti.</td></tr>
+<tr><td>Anjal sempurna</td><td>Ed = ∞</td><td><svg width="70" height="50" viewBox="0 0 70 50"><path d="M5 5V45H65" fill="none" stroke="#8a97ad"/><path d="M8 25H62" stroke="#c2410c" stroke-width="3"/></svg></td><td>Pada satu harga pengguna membeli, lebih tinggi sedikit pun tidak. Keluk mendatar. Barang pengganti biasa.</td></tr></table></div>
+
+<h3>Faktor yang mempengaruhi keanjalan</h3>
+<div class="two"><div class="card"><b>Cenderung anjal</b><ul><li>Ada barang pengganti</li><li>Perbelanjaan ialah nisbah besar daripada pendapatan</li><li>Banyak kegunaan</li><li>Jangka masa panjang (pengganti mudah dijumpai)</li></ul></div>
+<div class="card"><b>Cenderung tidak anjal</b><ul><li>Barang penting</li><li>Jangka masa pendek</li><li>Tabiat pengguna, contoh rokok</li><li>Kesetiaan kepada jenama</li></ul></div></div>
+</section>
+
+<section id="lat"><h2><span class="n">✏️</span>Latihan Benar / Salah</h2>
+<p>Daripada soalan latihan dalam nota. Pilih jawapan, kemudian lihat sebabnya.</p>
+<div class="card" id="quiz"></div></section>
+</main>
+<footer>Nota Kuliah 2 · UBF2113 Prinsip Ekonomi · Bahagian Pendidikan dan Latihan Teknikal Vokasional, KPM · Disesuaikan sebagai laman web pembelajaran</footer>
+
+<script>
+const $=id=>document.getElementById(id),css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+// ===== Kalkulator fungsi =====
+let mode="d";
+function fn(){const p1=+$("p1").value,q1=+$("q1").value,p2=+$("p2").value,q2=+$("q2").value,o=$("fnOut"),t=$("fnTbl");
+ if(p1==p2){o.textContent="Harga dua titik mesti berbeza.";t.innerHTML="";return}
+ const b=mode=="d"?(q2-q1)/(p1-p2):(q1-q2)/(p1-p2),a=mode=="d"?q1+b*p1:q1-b*p1,sg=mode=="d"?"−":"+";
+ const f=x=>mode=="d"?a-b*x:a+b*x;
+ o.innerHTML=`b = <b>${+b.toFixed(3)}</b>, a = <b>${+a.toFixed(3)}</b><br>Fungsi: <span class="fm">Q${mode} = ${+a.toFixed(3)} ${sg} ${+b.toFixed(3)}P</span>`;
+ let r="<tr><th>Harga</th>",c="<tr><th>Kuantiti</th>";for(let p=5;p>=1;p--){r+=`<td>${p}</td>`;c+=`<td>${+f(p).toFixed(2)}</td>`}t.innerHTML=r+"</tr>"+c+"</tr>"}
+["p1","q1","p2","q2"].forEach(i=>$(i).oninput=fn);
+document.querySelectorAll("#fnMode button").forEach(b=>b.onclick=()=>{mode=b.dataset.m;document.querySelectorAll("#fnMode button").forEach(x=>x.setAttribute("aria-pressed",x==b));
+ if(mode=="s"){[$("p1").value,$("q1").value,$("p2").value,$("q2").value]=[4,90,2,50]}else{[$("p1").value,$("q1").value,$("p2").value,$("q2").value]=[5,50,4,100]}fn()});
+fn();
+
+// ===== Pergerakan vs peralihan =====
+const MV={D:[["Harga turun",0,"Harga turun, kuantiti diminta <b>mengembang</b> (A ke B). Pergerakan di sepanjang keluk D0 yang sama."],["Harga naik",1,"Harga naik, kuantiti diminta <b>menguncup</b> (A ke C). Pergerakan di sepanjang keluk D0 yang sama."],["Pendapatan naik",2,"Pendapatan naik (barang normal): <b>pertambahan permintaan</b>. Keluk beralih ke kanan, D0 ke D2."],["Pendapatan turun",3,"Pendapatan turun: <b>pengurangan permintaan</b>. Keluk beralih ke kiri, D0 ke D1."]],
+S:[["Harga turun",0,"Harga turun, kuantiti ditawar <b>menguncup</b> (A ke B). Pergerakan di sepanjang keluk S0 yang sama."],["Harga naik",1,"Harga naik, kuantiti ditawar <b>mengembang</b> (A ke C). Pergerakan di sepanjang keluk S0 yang sama."],["Kos input turun",2,"Kos input turun atau teknologi maju: <b>pertambahan penawaran</b>. Keluk beralih ke kanan, S0 ke S2."],["Kos input naik",3,"Kos input naik: <b>pengurangan penawaran</b>. Keluk beralih ke kiri, S0 ke S1."]]};
+let mt="D",mc=0;
+function ln(x1,y1,x2,y2,c,dash,w){return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${c}" stroke-width="${w||3}" ${dash?'stroke-dasharray="6 5"':""}/>`}
+function drawMv(){const D=mt=="D",col=D?css("--d"):css("--s"),L=D?"D":"S";
+ const base=D?[70,50,270,190]:[70,190,270,50];
+ const sh=k=>k==2?40:k==3?-40:0;let s=`<path d="M40 15V225H305" fill="none" stroke="${css("--mut")}" stroke-width="2"/><text x="44" y="22">Harga</text><text x="262" y="243">Kuantiti</text>`;
+ const k=mc;s+=ln(...base,k>1?css("--mut"):col,k>1);
+ if(k>1){const d=sh(k);s+=ln(base[0]+d,base[1],base[2]+d,base[3],col)+`<text x="${base[2]+d-12}" y="${D?base[3]+16:base[3]-8}">${L}${k==2?2:1}</text>`}
+ s+=`<text x="${base[2]-12}" y="${D?base[3]+16:base[3]-8}">${L}0</text>`;
+ const pt=(x,y,n)=>`<circle cx="${x}" cy="${y}" r="6" fill="${css("--acc")}"/><text x="${x+8}" y="${y-8}">${n}</text>`;
+ if(k<2){s+=pt(170,120,"A");const up=D?(k==1):(k==1),x=up==D?130:210,y=up==D?92:148;
+  // titik tujuan: D harga turun->kanan bawah; S harga turun->kiri bawah
+  let bx,by;if(D){bx=k==0?210:130;by=k==0?148:92}else{bx=k==0?130:210;by=k==0?148:92}
+  s+=pt(bx,by,k==0?"B":"C")+`<path d="M175 ${120}L${bx} ${by}" stroke="${css("--ink")}" stroke-width="1.5" stroke-dasharray="3 3"/>`}
+ $("mv").innerHTML=s;$("mvTxt").innerHTML=MV[mt][k][2]}
+function mvBtns(){const w=$("mvCase");w.innerHTML="";MV[mt].forEach((c,i)=>{const b=document.createElement("button");b.textContent=c[0];b.setAttribute("aria-pressed",i==mc);b.onclick=()=>{mc=i;mvBtns();drawMv()};w.appendChild(b)})}
+document.querySelectorAll("#mvType button").forEach(b=>b.onclick=()=>{mt=b.dataset.t;mc=0;document.querySelectorAll("#mvType button").forEach(x=>x.setAttribute("aria-pressed",x==b));mvBtns();drawMv()});
+mvBtns();drawMv();
+
+// ===== Simulator keseimbangan =====
+const X=q=>40+q*9,Y=p=>225-p*35;
+const PR=[["Permintaan ↑",8,0],["Permintaan ↓",-8,0],["Penawaran ↑",0,8],["Penawaran ↓",0,-8],["Kedua-dua ↑ sama",6,6],["Permintaan ↑ lebih",8,3],["Penawaran ↑ lebih",3,8],["Asal",0,0]];
+PR.forEach(p=>{const b=document.createElement("button");b.textContent=p[0];b.onclick=()=>{$("dS").value=p[1];$("sS").value=p[2];eq()};$("presets").appendChild(b)});
+function curve(f,c,dash){let a="",b="";const pts=[];for(let q=0;q<=34;q+=1){pts.push([q,f(q)])}
+ return `<polyline clip-path="url(#cp)" points="${pts.map(p=>X(p[0])+","+Y(p[1])).join(" ")}" fill="none" stroke="${c}" stroke-width="3" ${dash?'stroke-dasharray="6 5" opacity=".5"':""}/>`}
+function eq(){const d=+$("dS").value,s=+$("sS").value;$("dv").textContent=d;$("sv").textContent=s;
+ const dc=css("--d"),sc=css("--s"),P=(30+d-s)/10,Q=13+(d+s)/2;
+ let g=`<defs><clipPath id="cp"><rect x="40" y="15" width="270" height="210"/></clipPath></defs><path d="M40 15V225H310" fill="none" stroke="${css("--mut")}" stroke-width="2"/><text x="44" y="12">Harga (RM)</text><text x="256" y="243">Kuantiti</text>`;
+ for(let p=1;p<=5;p++)g+=`<text x="22" y="${Y(p)+4}">${p}</text>`;
+ g+=curve(q=>(28-q)/5,dc,1)+curve(q=>(q+2)/5,sc,1)+curve(q=>(28+d-q)/5,dc)+curve(q=>(q+2-s)/5,sc);
+ g+=`<line x1="40" y1="${Y(P)}" x2="${X(Q)}" y2="${Y(P)}" stroke="${css("--ink")}" stroke-dasharray="3 3"/><line x1="${X(Q)}" y1="${Y(P)}" x2="${X(Q)}" y2="225" stroke="${css("--ink")}" stroke-dasharray="3 3"/><circle cx="${X(Q)}" cy="${Y(P)}" r="7" fill="${css("--acc")}"/><text x="${X(Q)+9}" y="${Y(P)-9}">E</text>`;
+ g+=`<text x="${X(Q)-8}" y="238">${+Q.toFixed(1)}</text>`;
+ $("eq").innerHTML=g;
+ const dp=P-3,dq=Q-13,w=(v,u,dn)=>Math.abs(v)<1e-9?"kekal":(v>0?"naik":"turun");
+ $("eqTxt").innerHTML=`Keseimbangan baru: harga <b>RM${+P.toFixed(2)}</b> (${w(dp)}), kuantiti <b>${+Q.toFixed(1)} unit</b> (${w(dq)}).`;
+ let h="<tr><th>Harga (RM)</th><th>Qd</th><th>Qs</th><th>Situasi</th></tr>";
+ for(let p=5;p>=1;p--){const a=28-5*p+d,b=-2+5*p+s,e=a==b;h+=`<tr class="${e?"eq":""}"><td>${p}</td><td>${a}</td><td>${b}</td><td>${e?"Keseimbangan":a>b?"Lebihan permintaan":"Lebihan penawaran"}</td></tr>`}
+ $("eqTbl").innerHTML=h}
+$("dS").oninput=eq;$("sS").oninput=eq;eq();
+matchMedia("(prefers-color-scheme:dark)").onchange=()=>{drawMv();eq()};
+
+// ===== Kalkulator keanjalan =====
+function el(){const P0=+$("eP0").value,P1=+$("eP1").value,Q0=+$("eQ0").value,Q1=+$("eQ1").value,o=$("eOut");
+ if(!P0||!Q0||P0==P1){o.textContent="Masukkan harga asal dan kuantiti asal bukan sifar, dan harga baru yang berbeza.";return}
+ const pq=(Q1-Q0)/Q0*100,pp=(P1-P0)/P0*100,e=pq/pp,a=Math.abs(e);
+ const k=a==0?"tidak anjal sempurna (Ed = 0)":Math.abs(a-1)<.005?"anjal satu (Ed = 1)":a<1?"tidak anjal (0 < Ed < 1)":"anjal (Ed > 1)";
+ o.innerHTML=`% ∆Qd = <b>${+pq.toFixed(2)}%</b><br>% ∆P = <b>${+pp.toFixed(2)}%</b><br>Ed = <b>${+e.toFixed(3)}</b><br>Nilai mutlak ${+a.toFixed(3)}: permintaan <b>${k}</b>.`}
+["eP0","eP1","eQ0","eQ1"].forEach(i=>$(i).oninput=el);el();
+
+// ===== Kuiz =====
+const QZ=[["Jadual permintaan menunjukkan beberapa kuantiti diminta pada tingkat harga yang sama.",0,"Jadual permintaan menunjukkan kuantiti diminta pada pelbagai tingkat harga, bukan harga yang sama."],
+["Keluk permintaan menghuraikan hukum permintaan dan mencerun ke bawah dari kiri ke kanan.",1,"Harga dan kuantiti diminta berhubungan songsang."],
+["Apabila harga barang naik secara relatif, pembeli menggantikannya dengan barang yang lebih murah.",1,"Inilah kesan penggantian."],
+["Apabila harga barang jatuh, pendapatan benar pembeli bertambah walaupun pendapatan wang tidak berubah.",1,"Inilah kesan pendapatan: pembeli mampu membeli kuantiti lebih banyak."],
+["Hubungan antara harga dengan kuantiti ditawar adalah negatif.",0,"Hubungannya positif (hukum penawaran)."],
+["Keluk penawaran biasanya mencerun ke bawah dari kiri ke kanan.",0,"Keluk penawaran mencerun ke atas dari kiri ke kanan."]];
+$("quiz").innerHTML=QZ.map((q,i)=>`<div class="q"><p><b>${i+1}.</b> ${q[0]}</p><div class="btns"><button data-i="${i}" data-v="1">Benar</button><button data-i="${i}" data-v="0">Salah</button></div><div class="ans" id="a${i}"></div></div>`).join("");
+$("quiz").onclick=e=>{const b=e.target.closest("button");if(!b)return;const i=+b.dataset.i,ok=(+b.dataset.v)==QZ[i][1];
+ $("a"+i).innerHTML=`<span class="${ok?"ok":"no"}">${ok?"Betul.":"Belum tepat."}</span> ${QZ[i][2]}`}
+</script>
+</body>
+</html>
